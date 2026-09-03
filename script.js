@@ -28,10 +28,12 @@ const container =
 
 function renderWeapons(selectedMR) {
 
+
+
     container.innerHTML = "";
 
     weapons
-        .filter(weapon => weapon.mr === selectedMR)
+        .filter(weapon => Number(weapon.mr) === Number(selectedMR))
         .forEach(weapon => {
 
             let materialsHTML = "";
