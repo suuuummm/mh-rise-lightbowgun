@@ -1,0 +1,106 @@
+[
+  {
+    "name": "夜行弩【鵂ノ眼】",
+    "mr": 3,
+    "ammo": "貫通弾Lv2(速射)",
+    "monster": "ナルガクルガ",
+    "materials": [
+      {
+        "name": "迅竜の厚鱗",
+        "required": 4,
+        "source": "ナルガクルガ",
+        "rank": "MR3",
+        "break": "落とし物(操竜)",
+        "rate": "50%"
+      },
+      {
+        "name": "迅竜の豪黒毛",
+        "required": 3,
+        "source": "ナルガクルガ",
+        "rank": "MR3",
+        "break": "ターゲット報酬",
+        "rate": "100%"
+      },
+      {
+        "name": "迅竜の重牙",
+        "required": 3,
+        "source": "ナルガクルガ",
+        "rank": "MR3",
+        "break": "部位破壊(頭部)",
+        "rate": "70%"
+      }
+    ]
+  },
+  {
+    "name": "ゴルム・アサルト改",
+    "mr": 4,
+    "ammo": "散弾Lv2・Lv3",
+    "monster": "ガランゴルム",
+    "materials": [
+      {
+        "name": "氷狼竜の雹蒼核",
+        "required": 1,
+        "source": "ルナガロン",
+        "rank": "MR4",
+        "break": "落とし物(通常)",
+        "rate": "20%"
+      },
+      {
+        "name": "大獣玉",
+        "required": 1,
+        "source": "ビシュテンゴ亜種",
+        "rank": "MR",
+        "break": "捕獲",
+        "rate": "6%"
+      }
+    ]
+  },
+  {
+    "name": "夜行弩【鵂ノ眼】改",
+    "mr": 5.10,
+    "ammo": "貫通弾Lv2(速射)",
+    "monster": "ナルガクルガ",
+    "materials": [
+      {
+        "name": "爵銀竜の重牙",
+        "required": 3,
+        "source": "メルゼナ",
+        "rank": "MR3",
+        "break": "剝ぎ取り",
+        "rate": "21%"
+      },
+      {
+        "name": "迅竜の天鱗",
+        "required": 1,
+        "source": "ナルガクルガ",
+        "rank": "MR3",
+        "break": "剝ぎ取り(尻尾)",
+        "rate": "5%"
+      }
+    ]
+  },
+  {
+    "name": "葬銀のクーゲル",
+    "mr": 100,
+    "ammo": "貫通弾Lv2(速射)",
+    "monster": "メルゼナ",
+    "materials": [
+      {
+        "name": "積怨の禍鱗",
+        "required": 3,
+        "source": "恐嗟響めくマガイマガド",
+        "rank": "MR100",
+        "break": "ターゲット報酬",
+        "rate": "100%"
+      },
+      {
+        "name": "爵銀竜の紅血玉",
+        "required": 1,
+        "source": "メルゼナ",
+        "rank": "MR4",
+        "break": "ターゲット報酬",
+        "rate": "3%"
+      }
+    ]
+  }
+]

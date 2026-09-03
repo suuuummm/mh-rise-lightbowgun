@@ -1,64 +1,25 @@
+let weapons = [];
+
 const roadmap = [
 
     {
         mr: "MR3",
-        weapon: "レウスライト"
+        weapon: "夜行弩【鵂ノ眼】"
     },
 
     {
         mr: "MR4",
-        weapon: "ナルガライト"
+        weapon: "ゴルム・アサルト改"
     },
 
     {
         mr: "MR5",
-        weapon: "ゴアライト"
-    },
-
-    {
-        mr: "MR10",
-        weapon: "最終装備候補"
+        weapon: "夜行弩【鵂ノ眼】改"
     },
 
     {
         mr: "MR100",
-        weapon: "完成装備"
-    }
-];
-
-const weapons = [
-    {
-        name: "レウスライト",
-        mr: 3,
-        ammo: "貫通弾",
-        monster: "リオレウス",
-        completed: false,
-
-        materials: [
-            {
-                name: "火竜の重殻",
-                required: 5
-            },
-            {
-                name: "火竜の上鱗",
-                required: 8
-            }
-        ]
-    },
-
-    {
-        name: "ナルガライト",
-        mr: 4,
-        ammo: "貫通弾",
-        monster: "ナルガクルガ",
-        completed: false,
-
-        materials: [
-            {
-                name: "迅竜の厚鱗",
-                required: 6
-            }
-        ]
+        weapon: "葬銀のクーゲル"
     }
 ];
 
@@ -70,7 +31,7 @@ function renderWeapons(selectedMR) {
     container.innerHTML = "";
 
     weapons
-        .filter(weapon => weapon.mr <= selectedMR)
+        .filter(weapon => weapon.mr === selectedMR)
         .forEach(weapon => {
 
             let materialsHTML = "";
@@ -103,6 +64,26 @@ function renderWeapons(selectedMR) {
 
             ${material.name}
             ${count}/${material.required}
+
+            <br>
+
+            入手先:
+            ${material.source}
+
+            <br>
+
+            ランク:
+            ${material.rank}
+
+            <br>
+
+            報酬:
+            ${material.break}
+
+            <br>
+
+            入手率:
+            ${material.rate}
 
             <button
             onclick="increase('${key}')">
@@ -189,8 +170,6 @@ document
     .getElementById("mrSelect")
     .addEventListener("change", refresh);
 
-renderWeapons(3);
-
 console.log("script.js 読み込み成功");
 
 const roadmapContainer =
@@ -211,3 +190,137 @@ roadmap.forEach(step => {
     </div>
     `;
 });
+
+fetch("data/weapons.json")
+    .then(response => response.json())
+    .then(data => {
+
+        weapons = data;
+
+        renderWeapons(3);
+    });
+
+function searchMonster() {
+
+    const keyword =
+        document.getElementById("monsterSearch").value.trim();
+
+    const foundWeapons =
+        weapons.filter(weapon =>
+            weapon.monster.toLowerCase().includes(keyword.toLowerCase())
+        );
+
+    console.log(keyword);
+    console.log(foundWeapons);
+
+    container.innerHTML = "";
+
+    if (foundWeapons.length === 0) {
+
+        container.innerHTML =
+            "<p>モンスターが見つかりません</p>";
+
+        return;
+    }
+
+    foundWeapons.forEach(weapon => {
+
+        let materialsHTML = "";
+
+        weapon.materials.forEach(material => {
+
+            const key =
+                weapon.name + material.name;
+
+            const count =
+                Number(localStorage.getItem(key))
+                || 0;
+
+            const percent =
+                material.required
+                    ? (count / material.required) * 100
+                    : 0;
+
+
+            const remaining = material.required - count;
+
+            const dropRate = Number((material.rate || "100%").replace("%", ""));
+
+            materialsHTML += `
+                <div class="progress-bar">
+
+                    <div class="progress-fill"
+                         style="width:${percent}%">
+                    </div>
+
+                </div>
+
+                <p>${percent.toFixed(0)}%</p>
+
+                <div class="material">
+
+                    ${material.name}
+                    ${count}/${material.required}
+
+                    <br>
+
+                    入手先：
+                    ${material.source}
+
+                    <button
+                        onclick="increase('${key}')">
+                        +
+                    </button>
+
+                    <button
+                        onclick="decrease('${key}')">
+                        -
+                    </button>
+
+                </div>
+            `;
+        });
+
+        container.innerHTML += `
+            <div class="weapon-card">
+
+                <h3>${weapon.name}</h3>
+
+                <p>必要MR:${weapon.mr}</p>
+
+                <p>弾種:${weapon.ammo}</p>
+
+                <p>
+                    今倒すべきモンスター：
+                    <strong>${weapon.monster}</strong>
+                </p>
+
+                <h4>必要素材</h4>
+
+                ${materialsHTML}
+
+            </div>
+        `;
+    });
+}
+
+
+document
+    .getElementById("monsterSearch")
+    .addEventListener("keydown", function (event) {
+
+        if (event.key === "Enter") {
+
+            searchMonster();
+        }
+    });
+
+document
+    .getElementById("monsterSearch")
+    .addEventListener("input", function () {
+
+        if (this.value === "") {
+
+            refresh();
+        }
+    });
