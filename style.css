@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Yu Gothic", sans-serif;
+    background: #1f2937;
+    color: white;
+    padding: 30px;
+}
+
+h1 {
+    color: #f59e0b;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.filter-box {
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.weapon-card {
+    background: #374151;
+    border: 2px solid #f59e0b;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+}
+
+.weapon-card h3 {
+    color: #fbbf24;
+    margin-bottom: 10px;
+}
+
+.material {
+    margin-top: 10px;
+}
+
+button {
+    margin-left: 5px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background: #f59e0b;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #d97706;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 20px;
+    background: #1f2937;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #22c55e;
+}
+
+.roadmap-step {
+
+    background: #374151;
+    border: 2px solid #f59e0b;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 12px;
+}
