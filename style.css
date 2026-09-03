@@ -1,0 +1,357 @@
+body {
+    background:
+        linear-gradient(180deg,
+            #19223b,
+            #2c3555,
+            #4a4063);
+
+    min-height: 100vh;
+}
+
+h1 {
+    color: #ffd4f0;
+}
+
+.subtitle {
+    color: #888;
+    margin-bottom: 40px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 320px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0.1);
+    transition: all .3s ease;
+}
+
+.card:hover {
+    box-shadow:
+        0 0 20px #ffd0e0,
+        0 0 40px #ffd0e0;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h2 {
+    color: #ff8db3;
+}
+
+.card p {
+    padding: 0 20px 20px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.detail-box {
+    width: 70%;
+    margin: 40px auto;
+    background: white;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0.1);
+}
+
+.card {
+    cursor: pointer;
+}
+
+#sakura-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.sakura {
+    position: absolute;
+    color: #ffb7d5;
+    font-size: 24px;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-50px);
+    }
+
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+#searchBox {
+    width: 300px;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    margin: 20px 0;
+    font-size: 16px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.4);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+}
+
+.modal-content {
+    background: white;
+    width: 600px;
+    max-width: 90%;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .25);
+    animation: popup .3s ease;
+}
+
+@keyframes popup {
+
+    from {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ff8db3;
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.favorite-btn {
+
+    background: #ffd6e7;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.favorite-btn:hover {
+    background: #ffc1d9;
+}
+
+#darkModeBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    color: #ff8db3;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+    background: linear-gradient(180deg,
+            #2c2c3e,
+            #1a1a28);
+}
+
+.dark-mode h1 {
+    color: #ffb6d9;
+}
+
+.dark-mode .subtitle {
+    color: #ddd;
+}
+
+.dark-mode .card {
+    background: #3a3a52;
+    color: white;
+}
+
+.dark-mode .detail-box {
+    background: #3a3a52;
+    color: white;
+}
+
+.dark-mode .modal-content {
+    background: #3a3a52;
+    color: white;
+}
+
+.hero {
+    padding: 80px;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 4);
+    backdrop-filter: blur(20px);
+    margin-bottom: 50px;
+}
+
+body {
+    cursor: pointer;
+}
+
+.card,
+button {
+    cursor: url("./images/paw.png"), pointer;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(135deg,
+            #ffd6e7,
+            #fff0c7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.loading-content {
+    text-align: center;
+}
+
+.cat-loader {
+    font-size: 80px;
+    animation:
+        bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+* {
+    cursor: url("./images/paw.png"), auto !important;
+}
+
+.fortune-box {
+    width: 70%;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+}
+
+.cafe-builder {
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+}
+
+#cafeArea {
+    min-height: 150px;
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px dashed #ffb6d9;
+    border-radius: 20px;
+    font-size: 40px;
+}
+
+.staff-section {
+    margin: 50px auto;
+    width: 80%;
+}
+
+.staff-card {
+    background: white;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 20px;
+    display: inline-block;
+    width: 200px;
+}
+
+.menu-card {
+    background: #fff;
+    width: 250px;
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+}
+
+.about-section,
+.today-cats,
+.event-section,
+.review-section,
+.hours-section,
+.contact-section {
+
+    width: 80%;
+    margin: 40px auto;
+    background: 30px;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+}
+
+.review-card {
+    background: #fff8fb;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 20px;
+}
