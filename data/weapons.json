@@ -80,6 +80,30 @@
     ]
   },
   {
+    "name": "THEヴァーチ",
+    "mr": 11,
+    "ammo": "貫通弾Lv2(速射)",
+    "monster": "シャガルマガラ",
+    "materials": [
+      {
+        "name": "金獅子の怒髪天",
+        "required": 2,
+        "source": "激昴ラージャン",
+        "rank": "MR6",
+        "break": "ターゲット報酬",
+        "rate": "100%"
+      },
+      {
+        "name": "天廻龍の天鱗",
+        "required": 1,
+        "source": "シャガルマガラ",
+        "rank": "MR5",
+        "break": "ターゲット報酬",
+        "rate": "3%"
+      }
+    ]
+  },
+  {
     "name": "葬銀のクーゲル",
     "mr": 100,
     "ammo": "貫通弾Lv2(速射)",

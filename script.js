@@ -18,6 +18,11 @@ const roadmap = [
     },
 
     {
+        mr: "MR11",
+        weapon: "THEヴァーチ"
+    },
+
+    {
         mr: "MR100",
         weapon: "葬銀のクーゲル"
     }
@@ -101,6 +106,13 @@ function renderWeapons(selectedMR) {
             `;
             });
 
+            const completedKey =
+                weapon.name + "_completed";
+
+            const completed =
+                localStorage.getItem(completedKey)
+                == "true";
+
             container.innerHTML += `
         <div class="weapon-card">
 
@@ -119,7 +131,15 @@ function renderWeapons(selectedMR) {
                 <label>
                 <input
                 type="checkbox"
-                class="completed">
+                class="completed"
+                ${completed ? "checked" : ""}
+                onchange="
+                localStorage.setItem(
+                '${completedKey}',
+                this.checked
+                )
+                "
+                >
 
                 作成済み
 
