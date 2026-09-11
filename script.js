@@ -448,6 +448,20 @@ function renderArmors(selectedMR) {
                         ${material.source}
                     </p>
 
+            ランク:
+            ${material.rank}
+
+            <br>
+
+            報酬:
+            ${material.break}
+
+            <br>
+
+            入手率:
+            ${material.rate}
+
+
                     <div class="progress-bar">
                         <div
                             class="progress-fill"
