@@ -1,0 +1,405 @@
+[
+  {
+    "mr": 3,
+    "name": "フロギィXヘルム",
+    "part": "頭",
+    "skills": [
+      "連射強化Lv2",
+      "回避距離UPLv1"
+    ],
+    "materials": [
+      {
+        "name": "毒狗竜の厚皮",
+        "required": 4,
+        "source": "ドスフロギィ",
+        "rank": "MR2",
+        "break": "ターゲット報酬",
+        "rate": "100%"
+      },
+      {
+        "name": "偉大なクチバシ",
+        "required": 1,
+        "source": "ドスフロギィ",
+        "rank": "MR2",
+        "break": "部位破壊(頭部)",
+        "rate": "75%"
+      },
+      {
+        "name": "エルトライト鉱石",
+        "required": 3,
+        "source": "大社跡",
+        "rank": "MR",
+        "break": "鉱石"
+      }
+    ]
+  },
+  {
+    "mr": 3,
+    "name": "アルブーロXベスト",
+    "part": "胴",
+    "skills": [
+      "貫通弾強化Lv1",
+      "通常弾強化Lv1",
+      "チューンアップLv1"
+    ],
+    "materials": [
+      {
+        "name": "アンモサカガイ",
+        "required": 1,
+        "source": "交易船で虫かキノコを増やした時のおまけ",
+        "rank": "MR2"
+      },
+      {
+        "name": "人魚竜の厚鱗",
+        "required": 3,
+        "source": "イソネミクニ",
+        "rank": "MR2",
+        "break": "ターゲット報酬",
+        "rate": "100%"
+      },
+      {
+        "name": "真珠色の艶皮",
+        "required": 2,
+        "source": "フルフル",
+        "rank": "MR2",
+        "break": "ターゲット報酬",
+        "rate": "100%"
+      },
+      {
+        "name": "ゴルドライト鉱石",
+        "required": 1,
+        "source": "砂原",
+        "rank": "MR",
+        "break": "鉱石"
+      }
+    ]
+  },
+  {
+    "mr": 3,
+    "name": "ギザミアーム",
+    "part": "腕",
+    "skills": [
+      "見切りLv2",
+      "貫通弾強化Lv1"
+    ],
+    "materials": [
+      {
+        "name": "鎌蟹の剛爪",
+        "required": 2,
+        "source": "ショウグンギザミ",
+        "rank": "MR3",
+        "break": "部位破壊(爪)",
+        "rate": "100%"
+      },
+      {
+        "name": "鎌蟹の重殻",
+        "required": 2,
+        "source": "ショウグンギザミ",
+        "rank": "MR3",
+        "break": "ターゲット報酬",
+        "rate": "100%"
+      },
+      {
+        "name": "メランジェ鉱石",
+        "required": 2,
+        "source": "溶岩洞",
+        "rank": "MR",
+        "break": "鉱石"
+      },
+      {
+        "name": "巨大な竜骨",
+        "required": 2,
+        "source": "溶岩洞、水没林、城塞高地",
+        "rank": "MR",
+        "break": "骨塚"
+      }
+    ]
+  },
+  {
+    "mr": 3,
+    "name": "ジャナフXコイル",
+    "part": "腰",
+    "skills": [
+      "攻撃Lv2"
+    ],
+    "materials": [
+      {
+        "name": "蜜顎竜の厚毛皮",
+        "required": 4,
+        "source": "アンジャナフ",
+        "rank": "MR2",
+        "break": "ターゲット報酬",
+        "rate": "100%"
+      },
+      {
+        "name": "蜜顎竜の厚鱗",
+        "required": 2,
+        "source": "アンジャナフ",
+        "rank": "MR2",
+        "break": "落とし物(操竜)",
+        "rate": "49%"
+      },
+      {
+        "name": "強竜骨",
+        "required": 2,
+        "source": "イソネミクニ",
+        "rank": "MR2",
+        "break": "捕獲"
+      },
+      {
+        "name": "蜜顎竜の天鱗",
+        "required": 1,
+        "source": "アンジャナフ",
+        "rank": "MR2",
+        "break": "捕獲",
+        "rate": "3%"
+      }
+    ]
+  },
+  {
+    "mr": 3,
+    "name": "アルブーロXサンダル",
+    "part": "脚",
+    "skills": [
+      "貫通弾強化Lv2",
+      "散弾強化Lv1"
+    ],
+    "materials": [
+      {
+        "name": "アンモサカガイ",
+        "required": 1,
+        "source": "交易船で虫かキノコを増やした時のおまけ",
+        "rank": "MR2"
+      },
+      {
+        "name": "強竜骨",
+        "required": 2,
+        "source": "イソネミクニ",
+        "rank": "MR2",
+        "break": "捕獲"
+      },
+      {
+        "name": "真珠色の艶皮",
+        "required": 3,
+        "source": "フルフル",
+        "rank": "MR2",
+        "break": "ターゲット報酬",
+        "rate": "100%"
+      },
+      {
+        "name": "咬魚の銅ヒゲ",
+        "required": 2,
+        "source": "カライーバ",
+        "rank": "MR",
+        "break": "剝ぎ取り",
+        "rate": "20%"
+      }
+    ]
+  },
+  {
+    "mr": 6,
+    "name": "ウツシ裏【御面】真",
+    "part": "頭",
+    "skills": [
+      "攻撃Lv2",
+      "弾丸節約Lv2",
+      "翔蟲使いLv1"
+    ],
+    "materials": [
+      {
+        "name": "エルガドチケット",
+        "required": 1,
+        "source": "クエストを一定回数クリアし、ガレアス提督に話しかける",
+        "rank": "MR3"
+      },
+      {
+        "name": "妃蜘蛛の剛爪",
+        "required": 2,
+        "source": "ヤツカダキ",
+        "rank": "MR3",
+        "break": "部位破壊(爪)",
+        "rate": "100%"
+      },
+      {
+        "name": "重竜骨",
+        "required": 1,
+        "source": "オロミドロ",
+        "rank": "MR3",
+        "break": "クエスト報酬",
+        "rate": "100%"
+      },
+      {
+        "name": "フロシスメタル",
+        "required": 2,
+        "source": "寒冷諸島",
+        "rank": "MR",
+        "break": "鉱石"
+      }
+    ]
+  },
+  {
+    "mr": 6,
+    "name": "ダマスクXメイル",
+    "part": "胴",
+    "skills": [
+      "貫通弾強化Lv2",
+      "匠Lv2"
+    ],
+    "materials": [
+      {
+        "name": "古龍の浄血",
+        "required": 2,
+        "source": "オオナズチ",
+        "rank": "MR5",
+        "break": "落とし物"
+      },
+      {
+        "name": "妃蜘蛛の重殻",
+        "required": 2,
+        "source": "ヤツカダキ",
+        "rank": "MR3",
+        "break": "ターゲット報酬",
+        "rate": "100%"
+      },
+      {
+        "name": "人魚竜の荒髪ヒレ",
+        "required": 1,
+        "source": "イソネミクニ",
+        "rank": "MR2",
+        "break": "部位破壊(髪ヒレ)",
+        "rate": "80%"
+      },
+      {
+        "name": "ピュアクリスタル",
+        "required": 1,
+        "source": "水没林",
+        "rank": "MR",
+        "break": "鉱石"
+      }
+    ]
+  },
+  {
+    "mr": 6,
+    "name": "プケプケXアーム",
+    "part": "腕",
+    "skills": [
+      "弾丸節約Lv1",
+      "弾導強化Lv2"
+    ],
+    "materials": [
+      {
+        "name": "鎌蟹の剛爪",
+        "required": 2,
+        "source": "ショウグンギザミ",
+        "rank": "MR3",
+        "break": "部位破壊(爪)",
+        "rate": "100%"
+      },
+      {
+        "name": "鎌蟹の重殻",
+        "required": 2,
+        "source": "ショウグンギザミ",
+        "rank": "MR3",
+        "break": "ターゲット報酬",
+        "rate": "100%"
+      },
+      {
+        "name": "メランジェ鉱石",
+        "required": 2,
+        "source": "溶岩洞",
+        "rank": "MR",
+        "break": "鉱石"
+      },
+      {
+        "name": "巨大な竜骨",
+        "required": 2,
+        "source": "溶岩洞、水没林、城塞高地",
+        "rank": "MR",
+        "break": "骨塚"
+      }
+    ]
+  },
+  {
+    "mr": 6,
+    "name": "スクワイアコイル",
+    "part": "腰",
+    "skills": [
+      "弱点特効Lv1",
+      "超会心Lv1"
+    ],
+    "materials": [
+      {
+        "name": "蜜顎竜の厚毛皮",
+        "required": 4,
+        "source": "アンジャナフ",
+        "rank": "MR2",
+        "break": "ターゲット報酬",
+        "rate": "100%"
+      },
+      {
+        "name": "蜜顎竜の厚鱗",
+        "required": 2,
+        "source": "アンジャナフ",
+        "rank": "MR2",
+        "break": "落とし物(操竜)",
+        "rate": "49%"
+      },
+      {
+        "name": "強竜骨",
+        "required": 2,
+        "source": "イソネミクニ",
+        "rank": "MR2",
+        "break": "捕獲"
+      },
+      {
+        "name": "蜜顎竜の天鱗",
+        "required": 1,
+        "source": "アンジャナフ",
+        "rank": "MR2",
+        "break": "捕獲",
+        "rate": "3%"
+      }
+    ]
+  },
+  {
+    "mr": 6,
+    "name": "神凪・真【袴】",
+    "part": "脚",
+    "skills": [
+      "超会心Lv2",
+      "ひるみ軽減Lv2",
+      "力の解放Lv1"
+    ],
+    "materials": [
+      {
+        "name": "アンモサカガイ",
+        "required": 1,
+        "source": "交易船で虫かキノコを増やした時のおまけ",
+        "rank": "MR2"
+      },
+      {
+        "name": "強竜骨",
+        "required": 2,
+        "source": "イソネミクニ",
+        "rank": "MR2",
+        "break": "捕獲"
+      },
+      {
+        "name": "真珠色の艶皮",
+        "required": 3,
+        "source": "フルフル",
+        "rank": "MR2",
+        "break": "ターゲット報酬",
+        "rate": "100%"
+      },
+      {
+        "name": "咬魚の銅ヒゲ",
+        "required": 2,
+        "source": "カライーバ",
+        "rank": "MR",
+        "break": "剝ぎ取り",
+        "rate": "20%"
+      }
+    ]
+  }
+]

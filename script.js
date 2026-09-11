@@ -1,4 +1,5 @@
 let weapons = [];
+let armors = [];
 
 const roadmap = [
 
@@ -65,6 +66,7 @@ function renderWeapons(selectedMR) {
                 </div>
 
                 </div>
+
 
                 <p>${percent.toFixed(0)}%</p>
             <div class="material">
@@ -186,6 +188,7 @@ function refresh() {
         document.getElementById("mrSelect").value
     );
     renderWeapons(mr);
+    renderArmors(mr);
 }
 
 document
@@ -220,6 +223,37 @@ fetch("data/weapons.json")
         weapons = data;
 
         renderWeapons(3);
+    });
+
+fetch("data/armors.json")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(
+                "armors.jsonの読み込みに失敗しました。"
+            );
+        }
+
+        return response.json();
+    })
+    .then(data => {
+        armors = data;
+
+        const selectedMR = Number(
+            document.getElementById("mrSelect").value
+        );
+
+        renderArmors(selectedMR);
+
+        console.log(
+            "防具データ読み込み成功",
+            armors
+        );
+    })
+    .catch(error => {
+        console.error(
+            "防具読み込みエラー:",
+            error
+        );
     });
 
 function searchMonster() {
@@ -346,3 +380,155 @@ document
             refresh();
         }
     });
+
+function renderArmors(selectedMR) {
+    const armorContainer =
+        document.getElementById("armorContainer");
+
+    if (!armorContainer) {
+        console.error(
+            "HTMLにarmorContainerがありません"
+        );
+        return;
+    }
+
+    armorContainer.innerHTML = "";
+
+    const filteredArmors = armors.filter(
+        armor =>
+            Number(armor.mr) === Number(selectedMR)
+    );
+
+    if (filteredArmors.length === 0) {
+        armorContainer.innerHTML =
+            "<p>このMRのおすすめ防具は未登録です。</p>";
+
+        return;
+    }
+
+    filteredArmors.forEach(armor => {
+        let materialsHTML = "";
+
+        armor.materials.forEach(material => {
+            const key =
+                "armor_" +
+                armor.name +
+                "_" +
+                material.name;
+
+            const count =
+                Number(
+                    localStorage.getItem(key)
+                ) || 0;
+
+            const percent =
+                Math.min(
+                    100,
+                    (
+                        count /
+                        material.required
+                    ) * 100
+                );
+
+            materialsHTML += `
+                <div class="material">
+                    <p>
+                        <strong>
+                            ${material.name}
+                        </strong>
+                    </p>
+
+                    <p>
+                        所持数：
+                        ${count}/${material.required}
+                    </p>
+
+                    <p>
+                        入手先：
+                        ${material.source}
+                    </p>
+
+                    <div class="progress-bar">
+                        <div
+                            class="progress-fill"
+                            style="width:${percent}%">
+                        </div>
+                    </div>
+
+                    <p>
+                        ${percent.toFixed(0)}%
+                    </p>
+
+                    <button
+                        type="button"
+                        onclick="increaseArmor('${key}')">
+                        ＋
+                    </button>
+
+                    <button
+                        type="button"
+                        onclick="decreaseArmor('${key}')">
+                        －
+                    </button>
+                </div>
+            `;
+        });
+
+        const skillText =
+            Array.isArray(armor.skills)
+                ? armor.skills.join("、")
+                : "未登録";
+
+        armorContainer.innerHTML += `
+            <div class="weapon-card">
+                <h3>
+                    ${armor.part}：${armor.name}
+                </h3>
+
+                <p>
+                    <strong>スキル：</strong>
+                    ${skillText}
+                </p>
+
+                <h4>必要素材</h4>
+
+                ${materialsHTML}
+            </div>
+        `;
+    });
+}
+
+function increaseArmor(key) {
+    let count =
+        Number(
+            localStorage.getItem(key)
+        ) || 0;
+
+    count++;
+
+    localStorage.setItem(
+        key,
+        count
+    );
+
+    refresh();
+}
+
+function decreaseArmor(key) {
+    let count =
+        Number(
+            localStorage.getItem(key)
+        ) || 0;
+
+    if (count > 0) {
+        count--;
+    }
+
+    localStorage.setItem(
+        key,
+        count
+    );
+
+    refresh();
+}
+
