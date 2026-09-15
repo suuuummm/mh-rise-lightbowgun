@@ -93,3 +93,86 @@ button:hover {
     margin-top: 10px;
     border-radius: 12px;
 }
+
+.armor-card {
+    background: linear-gradient(145deg,
+            #16343d,
+            #1f4b55);
+
+    border: 2px solid #5eead4;
+    border-left: 8px solid #2dd4bf;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #f0fdfa;
+    box-shadow: 0 4px 15px rgba(45, 212, 191, 0.25);
+}
+
+.armor-card h3 {
+    color: #99f6e4;
+    font-size: 22px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.armor-card h4 {
+    color: #ccfbf1;
+    border-bottom: 1px solid #5eead4;
+    padding-bottom: 7px;
+    margin-top: 18px;
+    margin-bottom: 12px;
+}
+
+.armor-part {
+    display: inline-block;
+    background-color: #0f766e;
+    color: white;
+    border: 1px solid #5eead4;
+    border-radius: 20px;
+    padding: 5px 14px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.armor-skills {
+    background-color: rgba(15, 118, 110, 0.35);
+    border-left: 4px solid #5eead4;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.armor-card .material {
+    background-color: rgba(15, 23, 42, 0.55);
+    border: 1px solid rgba(94, 234, 212, 0.35);
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 12px;
+}
+
+.armor-card .progress-bar {
+    background-color: #0f172a;
+}
+
+.armor-card .progress-fill {
+    background: linear-gradient(90deg,
+            #14b8a6,
+            #5eead4);
+}
+
+.armor-card button {
+    background-color: #0d9488;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    margin-top: 8px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.armor-card button:hover {
+    background-color: #14b8a6;
+}

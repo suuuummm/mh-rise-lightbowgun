@@ -288,117 +288,247 @@
     ],
     "materials": [
       {
-        "name": "鎌蟹の剛爪",
-        "required": 2,
-        "source": "ショウグンギザミ",
-        "rank": "MR3",
-        "break": "部位破壊(爪)",
-        "rate": "100%"
+        "name": "毒妖鳥の剛翼",
+        "required": 1,
+        "source": "プケプケ",
+        "rank": "MR2",
+        "break": "部位破壊(翼)",
+        "rate": "80%"
       },
       {
-        "name": "鎌蟹の重殻",
-        "required": 2,
-        "source": "ショウグンギザミ",
-        "rank": "MR3",
+        "name": "毒妖鳥の厚鱗",
+        "required": 3,
+        "source": "プケプケ",
+        "rank": "MR2",
         "break": "ターゲット報酬",
         "rate": "100%"
       },
       {
-        "name": "メランジェ鉱石",
+        "name": "劇烈毒袋",
         "required": 2,
+        "source": "プケプケ",
+        "rank": "MR2",
+        "break": "ターゲット報酬",
+        "rate": "11%"
+      },
+      {
+        "name": "ランポスの厚鱗",
+        "required": 2,
+        "source": "ランポス",
+        "rank": "MR(密林)",
+        "break": "剝ぎ取り"
+      }
+    ]
+  },
+  {
+    "mr": 6,
+    "name": "ダマスクXコイル",
+    "part": "腰",
+    "skills": [
+      "耳栓Lv1",
+      "匠Lv1",
+      "貫通弾強化Lv1",
+      "属性やられ耐性Lv1"
+    ],
+    "materials": [
+      {
+        "name": "古龍の浄血",
+        "required": 2,
+        "source": "オオナズチ",
+        "rank": "MR5",
+        "break": "落とし物"
+      },
+      {
+        "name": "人魚竜の重殻",
+        "required": 2,
+        "source": "イソネミク二",
+        "rank": "MR2",
+        "break": "ターゲット報酬",
+        "rate": "33%"
+      },
+      {
+        "name": "黄金色の純粘泥土",
+        "required": 1,
+        "source": "オロミドロ",
+        "rank": "MR3",
+        "break": "落とし物(通常)",
+        "rate": "28%"
+      },
+      {
+        "name": "メランジェ鉱石",
+        "required": 3,
         "source": "溶岩洞",
+        "rank": "MR",
+        "break": "鉱石"
+      }
+    ]
+  },
+  {
+    "mr": 6,
+    "name": "神凪・洸【緋袴】",
+    "part": "脚",
+    "skills": [
+      "攻撃Lv2",
+      "回避性能Lv1",
+      "挑戦者Lv1"
+    ],
+    "materials": [
+      {
+        "name": "エルガドチケット",
+        "required": 1,
+        "source": "クエストを一定回数クリアし、ガレアス提督に話しかける",
+        "rank": "MR3"
+      },
+      {
+        "name": "泡狐竜の剛爪",
+        "required": 2,
+        "source": "タマミツネ",
+        "rank": "MR4",
+        "break": "部位破壊(爪)",
+        "rate": "80%"
+      },
+      {
+        "name": "重竜骨",
+        "required": 1,
+        "source": "オロミドロ",
+        "rank": "MR3",
+        "break": "クエスト報酬",
+        "rate": "100%"
+      },
+      {
+        "name": "ピュアクリスタル",
+        "required": 1,
+        "source": "水没林",
+        "rank": "MR",
+        "break": "鉱石"
+      }
+    ]
+  },
+  {
+    "mr": 7,
+    "name": "ゼクスヘルム",
+    "part": "頭",
+    "skills": [
+      "連撃Lv1",
+      "気絶耐性Lv2"
+    ],
+    "materials": [
+      {
+        "name": "電竜の重冠甲",
+        "required": 1,
+        "source": "ライゼクス",
+        "rank": "MR4",
+        "break": "部位破壊(トサカ)",
+        "rate": "80%"
+      },
+      {
+        "name": "電竜の厚鱗",
+        "required": 5,
+        "source": "ライゼクス",
+        "rank": "MR4",
+        "break": "ターゲット報酬",
+        "rate": "100%"
+      },
+      {
+        "name": "ピュアクリスタル",
+        "required": 1,
+        "source": "水没林",
         "rank": "MR",
         "break": "鉱石"
       },
       {
-        "name": "巨大な竜骨",
-        "required": 2,
-        "source": "溶岩洞、水没林、城塞高地",
-        "rank": "MR",
-        "break": "骨塚"
-      }
-    ]
-  },
-  {
-    "mr": 6,
-    "name": "スクワイアコイル",
-    "part": "腰",
-    "skills": [
-      "弱点特効Lv1",
-      "超会心Lv1"
-    ],
-    "materials": [
-      {
-        "name": "蜜顎竜の厚毛皮",
-        "required": 4,
-        "source": "アンジャナフ",
-        "rank": "MR2",
-        "break": "ターゲット報酬",
-        "rate": "100%"
-      },
-      {
-        "name": "蜜顎竜の厚鱗",
-        "required": 2,
-        "source": "アンジャナフ",
-        "rank": "MR2",
-        "break": "落とし物(操竜)",
-        "rate": "49%"
-      },
-      {
-        "name": "強竜骨",
-        "required": 2,
-        "source": "イソネミクニ",
-        "rank": "MR2",
-        "break": "捕獲"
-      },
-      {
-        "name": "蜜顎竜の天鱗",
-        "required": 1,
-        "source": "アンジャナフ",
-        "rank": "MR2",
-        "break": "捕獲",
-        "rate": "3%"
-      }
-    ]
-  },
-  {
-    "mr": 6,
-    "name": "神凪・真【袴】",
-    "part": "脚",
-    "skills": [
-      "超会心Lv2",
-      "ひるみ軽減Lv2",
-      "力の解放Lv1"
-    ],
-    "materials": [
-      {
-        "name": "アンモサカガイ",
-        "required": 1,
-        "source": "交易船で虫かキノコを増やした時のおまけ",
-        "rank": "MR2"
-      },
-      {
-        "name": "強竜骨",
-        "required": 2,
-        "source": "イソネミクニ",
-        "rank": "MR2",
-        "break": "捕獲"
-      },
-      {
-        "name": "真珠色の艶皮",
+        "name": "モンスターの特濃",
         "required": 3,
-        "source": "フルフル",
-        "rank": "MR2",
-        "break": "ターゲット報酬",
-        "rate": "100%"
-      },
-      {
-        "name": "咬魚の銅ヒゲ",
-        "required": 2,
-        "source": "カライーバ",
+        "source": "オルタロス(大社跡)",
         "rank": "MR",
         "break": "剝ぎ取り",
-        "rate": "20%"
+        "rate": "25%"
+      }
+    ]
+  },
+  {
+    "mr": 7,
+    "name": "エスピナムフォアスト",
+    "part": "腕",
+    "skills": [
+      "攻勢Lv1",
+      "剛刃研磨Lv2",
+      "連射強化Lv1"
+    ],
+    "materials": [
+      {
+        "name": "棘竜の重殻",
+        "required": 4,
+        "source": "エスピナス",
+        "rank": "MR4",
+        "break": "部位破壊(背中)",
+        "rate": "70%"
+      },
+      {
+        "name": "棘竜の濃毒血",
+        "required": 2,
+        "source": "エスピナス",
+        "rank": "MR4",
+        "break": "部位破壊(背中)",
+        "rate": "30%"
+      },
+      {
+        "name": "棘竜の靭尾",
+        "required": 1,
+        "source": "エスピナス",
+        "rank": "MR4",
+        "break": "剝ぎ取り",
+        "rate": "80%"
+      },
+      {
+        "name": "重竜骨",
+        "required": 2,
+        "source": "オロミドロ",
+        "rank": "MR3",
+        "break": "クエスト報酬",
+        "rate": "100%"
+      }
+    ]
+  },
+  {
+    "mr": 7,
+    "name": "ゼクスグリーヴ",
+    "part": "脚",
+    "skills": [
+      "業物Lv3",
+      "弾丸節約Lv3"
+    ],
+    "materials": [
+      {
+        "name": "電竜の超電膜",
+        "required": 2,
+        "source": "ライゼクス",
+        "rank": "MR4",
+        "break": "部位破壊(翼)",
+        "rate": "30%"
+      },
+      {
+        "name": "電竜の剛翼爪",
+        "required": 2,
+        "source": "ライゼクス",
+        "rank": "MR4",
+        "break": "部位破壊(翼)",
+        "rate": "70%"
+      },
+      {
+        "name": "超高圧電甲",
+        "required": 3,
+        "source": "ライゼクス",
+        "rank": "MR4",
+        "break": "部位破壊(トサカ)",
+        "rate": "17%"
+      },
+      {
+        "name": "サファイアン鉱石",
+        "required": 2,
+        "source": "密林",
+        "rank": "MR",
+        "break": "鉱石"
       }
     ]
   }

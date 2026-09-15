@@ -183,17 +183,45 @@ function decrease(key) {
 }
 
 function refresh() {
-
-    const mr = Number(
-        document.getElementById("mrSelect").value
+    const weaponMR = Number(
+        document.getElementById(
+            "weaponMrSelect"
+        ).value
     );
-    renderWeapons(mr);
-    renderArmors(mr);
+
+    const armorMR = Number(
+        document.getElementById(
+            "armorMrSelect"
+        ).value
+    );
+
+    renderWeapons(weaponMR);
+    renderArmors(armorMR);
 }
 
 document
-    .getElementById("mrSelect")
-    .addEventListener("change", refresh);
+    .getElementById("weaponMrSelect")
+    .addEventListener(
+        "change",
+        function () {
+            const selectedMR =
+                Number(this.value);
+
+            renderWeapons(selectedMR);
+        }
+    );
+
+document
+    .getElementById("armorMrSelect")
+    .addEventListener(
+        "change",
+        function () {
+            const selectedMR =
+                Number(this.value);
+
+            renderArmors(selectedMR);
+        }
+    );
 
 console.log("script.js 読み込み成功");
 
@@ -219,30 +247,37 @@ roadmap.forEach(step => {
 fetch("data/weapons.json")
     .then(response => response.json())
     .then(data => {
-
         weapons = data;
 
-        renderWeapons(3);
+        const selectedWeaponMR =
+            Number(
+                document.getElementById(
+                    "weaponMrSelect"
+                ).value
+            );
+
+        renderWeapons(selectedWeaponMR);
+    })
+    .catch(error => {
+        console.error(
+            "武器データ読み込みエラー：",
+            error
+        );
     });
 
 fetch("data/armors.json")
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(
-                "armors.jsonの読み込みに失敗しました。"
-            );
-        }
-
-        return response.json();
-    })
+    .then(response => response.json())
     .then(data => {
         armors = data;
 
-        const selectedMR = Number(
-            document.getElementById("mrSelect").value
-        );
+        const selectedArmorMR =
+            Number(
+                document.getElementById(
+                    "armorMrSelect"
+                ).value
+            );
 
-        renderArmors(selectedMR);
+        renderArmors(selectedArmorMR);
 
         console.log(
             "防具データ読み込み成功",
@@ -251,7 +286,7 @@ fetch("data/armors.json")
     })
     .catch(error => {
         console.error(
-            "防具読み込みエラー:",
+            "防具データ読み込みエラー：",
             error
         );
     });
@@ -374,10 +409,15 @@ document
 document
     .getElementById("monsterSearch")
     .addEventListener("input", function () {
-
         if (this.value === "") {
+            const selectedWeaponMR =
+                Number(
+                    document.getElementById(
+                        "weaponMrSelect"
+                    ).value
+                );
 
-            refresh();
+            renderWeapons(selectedWeaponMR);
         }
     });
 
@@ -494,7 +534,7 @@ function renderArmors(selectedMR) {
                 : "未登録";
 
         armorContainer.innerHTML += `
-            <div class="weapon-card">
+            <div class="armor-card">
                 <h3>
                     ${armor.part}：${armor.name}
                 </h3>
